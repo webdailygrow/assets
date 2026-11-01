@@ -347,3 +347,10 @@
   var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}});},{threshold:.15});
   els.forEach(function(e){io.observe(e);});
 })();
+
+/* Яндекс Метрика: цель "переход на страницу регистрации" (JS-событие registration_click, счётчик 87284012) */
+(function(){
+  function hit(){ try{ if(typeof ym==='function'){ ym(87284012,'reachGoal','registration_click'); } }catch(e){} }
+  var links=document.querySelectorAll('.dgx a[href*="daily-grow.com/register"]');
+  links.forEach(function(a){ a.addEventListener('click', hit); });
+})();
